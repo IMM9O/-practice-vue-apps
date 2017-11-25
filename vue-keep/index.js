@@ -25,11 +25,13 @@ var app = new Vue({
 			time: '',
 			color: ''
 		},
+		selectedColor: '',
 		notes: read_cookie('notes')
 	},
 	methods: {
 		onSubmit() {
 			this.note.time = new Date().toLocaleString();
+			this.note.color = this.note.color === '' ? '#FFF' : this.note.color;
 			this.notes.push(this.note);
 			this.note = {};
 			bake_cookie('notes', this.notes);
@@ -38,5 +40,16 @@ var app = new Vue({
 			this.notes.splice(index,1);
 			bake_cookie('notes', this.notes);
 		}
-	}
+	},
+	computed: {
+			filterColor: function () {
+				return this.notes.filter( (item) => {
+					if(this.selectedColor !== '') {
+							return item.color.toLowerCase() === this.selectedColor.toLowerCase();
+					} else {
+						return true;
+					}
+				})
+			}
+   }
 })

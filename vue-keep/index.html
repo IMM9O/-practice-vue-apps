@@ -34,7 +34,7 @@
                         <select class="form-control" id="colorLabel" placeholder="Color" v-model="note.color">
                             <option disabled value="">Please select one</option>
                             <option v-for="color in colors" class="color-option" v-bind:style="{ backgroundColor: color }">
-                                    {{color}}
+                                {{color}}
                             </option>
                         </select>
                     </div>
@@ -43,10 +43,22 @@
             </div>
         </div>
 
+        <div class="container-fluid">
+            <div class="row center">
+                <div class="color-circle default" @click="selectedColor = ''">Reset</div>
+                <div class="color-circle" v-for="color in colors" v-bind:style="{ backgroundColor: color }" @click="selectedColor = color">
+                    <span v-if="selectedColor === color" class="checkmark">
+                        <div class="checkmark_stem"></div>
+                        <div class="checkmark_kick"></div>
+                    </span>
+                </div>
+            </div>
+        </div>
+
 
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-4 col-sm-6 col-xs-12" v-for="(item, index) in notes">
+                <div class="col-md-4 col-sm-6 col-xs-12" v-for="(item, index) in filterColor">
                     <div class="card note" v-bind:style="{ backgroundColor: item.color }">
                         <div class="title text-danger">
                             <strong> {{ item.title }} </strong>
