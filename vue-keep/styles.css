@@ -1,0 +1,72 @@
+body .card:hover {
+  border-color: #f1c40f;
+  box-shadow: 0 8px 0px rgba(241, 196, 15, 0.3), 0 0 8px rgba(241, 196, 15, 0.3);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*
+  * check this answer to fix most common problem with bootstrap
+  * https://stackoverflow.com/questions/22310912/bootstrap-row-with-columns-of-different-height
+  * https://stackoverflow.com/questions/25954181/bootstrap-css-classes-wildcard
+  */
+[class*="col"] {
+  display: inline-block;
+  float: none;
+}
+
+body {
+  font-size: 16px;
+  color: #27ae60;
+  padding: 3px;
+  font-family: "Roboto", sans-serif, "Times New Roman";
+  background: #ecf0f1;
+}
+body .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+body .form {
+  margin: 20px 0;
+}
+body .form .color-option {
+  display: block;
+  height: 20px;
+  padding: 10px;
+}
+body .card {
+  border: 1px solid #9b59b6;
+  position: relative;
+  margin: 10px 0;
+  background: #fff;
+  border-radius: 9px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-transition: box-shadow 0.3s ease-out, border-color 0.3s ease-out;
+  transition: box-shadow 0.3s ease-out, border-color 0.3s ease-out;
+}
+body .card .title {
+  border-bottom: 1px solid #eee;
+  font-size: 1.5625em;
+}
+body .card .time {
+  margin-bottom: 10px;
+}
+body .card .close {
+  position: absolute;
+  right: 10px;
+}
