@@ -3,7 +3,7 @@
     <h3>{{ title }}</h3>
     <h4>
       <router-link to="/data/people" class="link">Meet tHe characters</router-link> | 
-      <router-link to="/data/plants" class="link">Exploar Plants</router-link>
+      <router-link to="/data/planets" class="link">Exploar Planets</router-link>
     </h4>
    <router-view></router-view>
   </div>
