@@ -11,6 +11,6 @@
 <script>
 export default {
   namr: 'Character',
-  props: ['id', 'item']
+  props: ['item']
 };
 </script>
