@@ -2,8 +2,9 @@
   <div id="app">
     <h3>{{ title }}</h3>
     <h4>
-      <router-link to="/data/people" class="link">Meet tHe characters</router-link> | 
-      <router-link to="/data/planets" class="link">Exploar Planets</router-link>
+      <router-link to="/data/people" class="link">Meet the characters</router-link> | 
+      <router-link to="/data/planets" class="link">Exploar Planets</router-link> | 
+      <router-link to="/data/vehicles" class="link">Show Vehicles</router-link>
     </h4>
    <router-view></router-view>
   </div>

@@ -10,7 +10,10 @@
 
 <script>
 export default {
-  name: 'Character',
-  props: ['item']
+  name: 'Vehicles',
+  props: ['item'],
+  mounted: function() {
+      console.log(this.item);
+  }
 };
 </script>
