@@ -1,7 +1,7 @@
-import Vue from "vue";
-import App from "./App/App.vue";
-import { router } from "./app/app.router";
-import countNumber from "./app/shared/CountNumber";
+import Vue from "vue"
+import App from "./App/App.vue"
+import { router } from "./app/app.router"
+import countNumber from "./app/shared/CountNumber"
 
 new Vue({
   el: "#app",

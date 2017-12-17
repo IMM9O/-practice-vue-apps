@@ -1,5 +1,5 @@
 export default function(value) {
-  if (!value || isNaN(value)) return value;
+  if (!value || isNaN(value)) return;
   value = Number(value);
 
   if(value >= 1000 && value < 1000000) {
