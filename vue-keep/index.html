@@ -13,11 +13,9 @@
 
 <body>
     <div id="app">
-
         <div class="header">
             <h1>Vue Keep</h1>
         </div>
-
         <div class="container-fluid form">
             <div class="row">
                 <form class="col-xs-12" v-on:submit.prevent="onSubmit">
@@ -42,7 +40,6 @@
                 </form>
             </div>
         </div>
-
         <div class="container-fluid">
             <div class="row center">
                 <div class="color-circle default" @click="selectedColor = ''">Reset</div>
@@ -54,8 +51,6 @@
                 </div>
             </div>
         </div>
-
-
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-4 col-sm-6 col-xs-12" v-for="(item, index) in filterColor">
@@ -72,7 +67,6 @@
                         <div class="close" @click="removeNote(index)">
                             &times;
                         </div>
-
                     </div>
                 </div>
             </div>
