@@ -60,11 +60,11 @@ body .card {
   transition: all  0.3s ease-out;
 }
 body .card .title {
-  border-bottom: 1px solid #eee;
   font-size: 1.5625em;
 }
 body .card .time {
-  margin-bottom: 10px;
+  margin: 10px -10px;
+  text-align: center;
 }
 body .card .close {
   position: absolute;
@@ -137,6 +137,7 @@ article {
   -webkit-column-width: 13em;
   -moz-column-gap: 1em;
   -webkit-column-gap: 1em; 
+  text-align: center;
    
  }
  
