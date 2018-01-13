@@ -30,15 +30,17 @@ var app = new Vue({
   data: {
     colors: [
       "#fff",
-      "#1abc9c",
-      "#2ecc71",
-      "#3498db",
-      "#9b59b6",
-      "#16a085",
-      "#27ae60",
-      "#2980b9",
-      "#8e44ad",
-      "#2c3e50"
+      "#f8bbd0",
+      "#ff8a80",
+      "#ffd180",
+      "#ffff8d",
+      "#ccff90",
+      "#a7ffeb",
+      "#80d8ff",
+      "#82b1ff",
+      "#b388ff",
+      "#d7ccc8",
+      "#cfd8dc"
     ],
     note: {
       title: "",

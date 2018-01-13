@@ -1,6 +1,5 @@
 body .card:hover {
-  border-color: #f1c40f;
-  box-shadow: 0 8px 0px rgba(241, 196, 15, 0.3), 0 0 8px rgba(241, 196, 15, 0.3);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 * {
@@ -14,7 +13,7 @@ body .card:hover {
 * https://stackoverflow.com/questions/22310912/bootstrap-row-with-columns-of-different-height
 * https://stackoverflow.com/questions/25954181/bootstrap-css-classes-wildcard
 */
-[class*=col] {
+[class*="col"] {
   display: inline-block;
   float: none;
 }
@@ -23,7 +22,7 @@ body {
   font-size: 16px;
   color: #27ae60;
   padding: 3px;
-  font-family: 'Roboto', sans-serif,'Times New Roman';
+  font-family: "Roboto", sans-serif, "Times New Roman";
   background: #ecf0f1;
 }
 body .header {
@@ -31,8 +30,8 @@ body .header {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 body .form {
   margin: 20px 0;
@@ -43,21 +42,22 @@ body .form .color-option {
   padding: 10px;
 }
 body .card {
-  border: 1px solid #9b59b6;
   position: relative;
   margin: 10px 0;
-  background: #FFF;
-  border-radius: 9px;
+  background: #fff;
+  color: rgba(0, 0, 0, 0.87);
+  border-radius: 3px;
   padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-transition: box-shadow  0.3s ease-out,  border-color 0.3s ease-out;
-  transition: box-shadow  0.3s ease-out,  border-color 0.3s ease-out;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-transition: all  0.3s ease-out;
+  transition: all  0.3s ease-out;
 }
 body .card .title {
   border-bottom: 1px solid #eee;
@@ -76,22 +76,22 @@ body .card .close {
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  color: #FFF;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -ms-flex-line-pack: center;
-      align-content: center;
+  align-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .color-circle.default {
   background: #333;
+  color: #fff;
 }
 
 .center {
@@ -99,10 +99,10 @@ body .card .close {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .checkmark {
@@ -110,14 +110,14 @@ body .card .close {
   width: 22px;
   height: 22px;
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .checkmark_stem {
   position: absolute;
   width: 3px;
   height: 9px;
-  background-color: #FFF;
+  background-color: rgba(0, 0, 0, 0.87);
   left: 11px;
   top: 6px;
 }
@@ -126,7 +126,24 @@ body .card .close {
   position: absolute;
   width: 3px;
   height: 3px;
-  background-color: #FFF;
+  background-color: rgba(0, 0, 0, 0.87);
   left: 8px;
   top: 12px;
 }
+
+
+article {
+  -moz-column-width: 13em;
+  -webkit-column-width: 13em;
+  -moz-column-gap: 1em;
+  -webkit-column-gap: 1em; 
+   
+ }
+ 
+ section {
+  display: inline-block;
+  margin:  0.25rem;
+  padding:  1rem;
+  width:  100%; 
+  background:  #efefef;
+ }
