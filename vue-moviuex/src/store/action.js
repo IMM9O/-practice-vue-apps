@@ -22,3 +22,8 @@ export const getPopular = ({ commit }) => {
     .then(res => res.json())
     .then(json => commit(types.ADD_MOVIE, json));
 };
+
+export const removeMovie = ({commit}, index) => {
+  console.log(index);
+  commit(types.REMOVE_MOVIE, index);
+}

@@ -12,5 +12,9 @@ export const mutations = {
             });
         }
 
+    },
+    [types.REMOVE_MOVIE] (state, payload) {
+        state.movies.splice(payload, 1)
     }
+
 }

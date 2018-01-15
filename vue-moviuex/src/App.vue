@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="cards">
-          <Movie-cell class="card" v-for="item in $store.state.movies" :key="item.id" :item="item" />
+          <Movie-cell class="card" v-for="(item, index ) in $store.state.movies" :key="item.id" :item="item" :index="index" />
     </div>
   </div>
 </template>
