@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <button @click="getPopular">Add Movie</button>
     <div class="cards">
           <Movie-cell class="card" v-for="item in $store.state.movies" :key="item.id" :item="item" />
     </div>
@@ -15,16 +14,18 @@ export default {
     MovieCell
   },
   methods: mapActions([
-    'addMovie',
     'getPopular'
-  ])
+  ]),
+  created() {
+    this.getPopular();
+  }
 }
 </script>
 
 <style>
 
 .card {
-  margin: 5px;
+  margin: 15px;
 }
 
 .cards {

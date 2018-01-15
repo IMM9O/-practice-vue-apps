@@ -39,7 +39,7 @@ export default {
 
 .movie-card .caption {
   left: 150px;
-  padding: 5px;
+  padding: 15px;
   position: absolute;
 }
 
