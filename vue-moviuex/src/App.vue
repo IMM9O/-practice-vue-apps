@@ -1,7 +1,8 @@
 <template>
   <div id="app">
+    <h1 class="title">What is popular today ?</h1>
     <div class="cards">
-          <Movie-cell class="card" v-for="(item, index ) in $store.state.movies" :key="item.id" :item="item" :index="index" />
+        <Movie-cell class="card" v-for="(item, index ) in $store.state.movies" :key="item.id" :item="item" :index="index" />
     </div>
   </div>
 </template>
@@ -37,6 +38,10 @@ export default {
 
 .card {
   margin: 10px;
+}
+
+#app .title{
+  text-align: center;
 }
 
 </style>
