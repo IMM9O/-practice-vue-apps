@@ -48,6 +48,32 @@ npm run build
 * Add Global Fillter
 * Add Simple managing state
 
+
+## vue-moviuex
+
+### Installation and run
+
+```bash
+# this project build using vue-cli
+
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+```
+
+### What i learned
+
+* Using vuex librairy for managing state
+* Using component lifecycle hooks
+* Using component props data
+* Using one-way data flow
+* Using Presentational and Container Components
+
 ---
 
 ## setup router with ease
@@ -77,6 +103,28 @@ new Vue({
   render: h => h(App)
 });
 ```
+
+---
+
+## setup vuex with ease
+
+* Create `store/index.js` file on the app root folder
+* First import Vue and Vuex
+* Second use this functions to enable vuex for application `Vue.use(Vuex)`
+* Add Your intial state 
+* Create another file `mutations.js` to contain all oprations on the state this is the only place allowed to mutate your state.
+* Create another file called `actions.js` contains all actions we can call from components.
+* From component if you want to use or call any actions
+```javasctipt
+import { mapActions } from 'vuex'
+
+export default {
+  methods: mapActions([
+    'removeMovie'
+  ])
+}
+```
+* Export new instance from `Vuex.Store({})` and the object contains state, mutations and actions 
 
 ---
 
