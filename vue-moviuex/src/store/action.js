@@ -1,6 +1,6 @@
 import * as types from "./mutation-types";
 
-const API_KEY = "";
+const API_KEY = "4f1304fe673432f9d475b5f48f7400e7";
 const POSTER_URL = "https://image.tmdb.org/t/p/w500";
 
 export const getRandomMovie = ({ commit }) => {
